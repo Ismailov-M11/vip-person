@@ -2,6 +2,10 @@
 
 // ─── Splash ─────────────────────────────────────────────────
 function SplashScreen({ nav }) {
+  React.useEffect(() => {
+    if (window.__vpSetSBDark) window.__vpSetSBDark(false);
+    return () => { if (window.__vpSetSBDark) window.__vpSetSBDark(true); };
+  }, []);
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', background: 'radial-gradient(120% 80% at 50% 0%, #FFF0E0 0%, #FAF4EC 55%)' }}>
       <div style={{ position: 'absolute', top: 90, left: 40, opacity: 0.5 }}><Icon name="sparkle" size={20} fill style={{ color: 'var(--gold)' }} /></div>

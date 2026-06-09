@@ -199,9 +199,10 @@ function IOSList({ header, children, dark = false }) {
 // Device frame
 // ─────────────────────────────────────────────────────────────
 function IOSDevice({
-  children, width = 402, height = 874, dark = false,
+  children, width = 402, height = 874, dark = false, statusBarDark,
   title, keyboard = false,
 }) {
+  const sbDark = statusBarDark !== undefined ? statusBarDark : dark;
   return (
     <div style={{
       width, height, borderRadius: 48, overflow: 'hidden',
@@ -213,11 +214,11 @@ function IOSDevice({
       {/* dynamic island */}
       <div style={{
         position: 'absolute', top: 11, left: '50%', transform: 'translateX(-50%)',
-        width: 126, height: 37, borderRadius: 24, background: '#000', zIndex: 50,
+        width: 126, height: 37, borderRadius: 24, background: '#000', zIndex: 90,
       }} />
-      {/* status bar (absolute) */}
-      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10 }}>
-        <IOSStatusBar dark={dark} />
+      {/* status bar — zIndex 85 keeps it above sticky headers (z:30) and sheets (z:80) */}
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 85 }}>
+        <IOSStatusBar dark={sbDark} />
       </div>
       {/* nav + content */}
       <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
