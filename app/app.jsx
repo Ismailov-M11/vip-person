@@ -124,8 +124,6 @@ function App() {
 // ─── Device scaler ──────────────────────────────────────────
 function Stage() {
   const ref = React.useRef(null);
-  const [statusBarDark, setStatusBarDark] = React.useState(true);
-  window.__vpSetSBDark = setStatusBarDark;
   React.useEffect(() => {
     const fit = () => {
       const pad = 24;
@@ -137,9 +135,9 @@ function Stage() {
     return () => window.removeEventListener('resize', fit);
   }, []);
   return (
-    <div style={{ width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'radial-gradient(120% 90% at 50% -10%, #1A1714 0%, #08070' + '6 60%)', overflow: 'hidden' }}>
+    <div style={{ width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'radial-gradient(ellipse 120% 100% at 50% 0%, #FFF4E6 0%, #F0E2CC 100%)', overflow: 'hidden' }}>
       <div ref={ref} style={{ transformOrigin: 'center center' }}>
-        <IOSDevice dark statusBarDark={statusBarDark}>
+        <IOSDevice dark>
           <App />
         </IOSDevice>
       </div>
