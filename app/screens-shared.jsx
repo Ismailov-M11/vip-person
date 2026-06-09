@@ -2,12 +2,8 @@
 
 // ─── Splash ─────────────────────────────────────────────────
 function SplashScreen({ nav }) {
-  React.useEffect(() => {
-    if (window.__vpSetSBDark) window.__vpSetSBDark(false);
-    return () => { if (window.__vpSetSBDark) window.__vpSetSBDark(true); };
-  }, []);
   return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', background: 'radial-gradient(120% 80% at 50% 0%, #FFF0E0 0%, #FAF4EC 55%)' }}>
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', background: 'radial-gradient(120% 80% at 50% 0%, #1B1510 0%, var(--bg) 55%)' }}>
       <div style={{ position: 'absolute', top: 90, left: 40, opacity: 0.5 }}><Icon name="sparkle" size={20} fill style={{ color: 'var(--gold)' }} /></div>
       <div style={{ position: 'absolute', top: 160, right: 54, opacity: 0.3 }}><Icon name="sparkle" size={13} fill style={{ color: 'var(--gold)' }} /></div>
       <div style={{ position: 'absolute', top: 240, left: 70, opacity: 0.25 }}><Icon name="sparkle" size={11} fill style={{ color: 'var(--accent)' }} /></div>
@@ -17,7 +13,7 @@ function SplashScreen({ nav }) {
         <div style={{ textAlign: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, justifyContent: 'center' }}>
             <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontSize: 46, color: 'var(--accent)', lineHeight: 1 }}>VIP</span>
-            <span style={{ fontWeight: 800, fontSize: 42, letterSpacing: '-0.03em', color: '#1E1208' }}>Person</span>
+            <span style={{ fontWeight: 800, fontSize: 42, letterSpacing: '-0.03em', color: 'var(--text)' }}>Person</span>
           </div>
           <div style={{ fontSize: 14.5, color: 'var(--text-2)', fontWeight: 600, marginTop: 12, lineHeight: 1.5, maxWidth: 280 }}>
             Платформа, где <span style={{ color: 'var(--gold)' }}>бизнес</span> и <span style={{ color: 'var(--accent)' }}>блогеры</span> находят друг друга
