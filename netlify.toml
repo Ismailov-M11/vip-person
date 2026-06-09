@@ -1,0 +1,10 @@
+# publish dir is the repo root (index.html lives here)
+[build]
+  publish = "."
+  command = ""
+
+# SPA-style fallback so any path serves the app
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
