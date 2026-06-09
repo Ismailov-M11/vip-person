@@ -324,7 +324,7 @@ function BProfile({ nav }) {
           <IconBtn name="sliders" onClick={() => nav.toast('Настройки фильтров')} style={{ background: 'rgba(12,11,10,0.5)' }} />
         </div>
       </div>
-      <div style={{ padding: '0 18px', marginTop: -48 }}>
+      <div style={{ padding: '0 18px', marginTop: -48, position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: 14, marginBottom: 16 }}>
           <Avatar initials={b.initials} color={b.color} size={84} ring />
           <div style={{ paddingBottom: 6 }}>
@@ -411,7 +411,7 @@ function BBizProfile({ nav, params }) {
       <div style={{ position: 'relative', height: 152, background: `linear-gradient(120deg, ${biz.color}55, var(--bg))` }}>
         <div style={{ position: 'absolute', top: 68, left: 18 }}><IconBtn name="back" onClick={() => nav.pop()} style={{ background: 'rgba(12,11,10,0.5)' }} /></div>
       </div>
-      <div style={{ padding: '0 18px', marginTop: -48 }}>
+      <div style={{ padding: '0 18px', marginTop: -48, position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: 14, marginBottom: 14 }}>
           <BizLogo biz={biz} size={80} />
           <div style={{ paddingBottom: 6, flex: 1 }}>
