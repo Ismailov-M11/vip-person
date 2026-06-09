@@ -119,7 +119,7 @@ function BizProfile({ nav }) {
       <div style={{ position: 'relative', height: 152, background: `linear-gradient(120deg, ${biz.color}66, var(--bg))` }}>
         <div style={{ position: 'absolute', top: 68, right: 18 }}><IconBtn name="edit" onClick={() => nav.toast('Редактирование профиля')} style={{ background: 'rgba(12,11,10,0.5)' }} /></div>
       </div>
-      <div style={{ padding: '0 18px', marginTop: -48 }}>
+      <div style={{ padding: '0 18px', marginTop: -48, position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: 14, marginBottom: 16 }}>
           <BizLogo biz={biz} size={82} />
           <div style={{ paddingBottom: 6 }}>
