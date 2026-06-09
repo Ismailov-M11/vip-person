@@ -17,7 +17,7 @@ function SplashScreen({ nav }) {
         <div style={{ textAlign: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, justifyContent: 'center' }}>
             <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontSize: 46, color: 'var(--accent)', lineHeight: 1 }}>VIP</span>
-            <span style={{ fontWeight: 800, fontSize: 42, letterSpacing: '-0.03em', color: 'var(--text)' }}>Person</span>
+            <span style={{ fontWeight: 800, fontSize: 42, letterSpacing: '-0.03em', color: '#1E1208' }}>Person</span>
           </div>
           <div style={{ fontSize: 14.5, color: 'var(--text-2)', fontWeight: 600, marginTop: 12, lineHeight: 1.5, maxWidth: 280 }}>
             Платформа, где <span style={{ color: 'var(--gold)' }}>бизнес</span> и <span style={{ color: 'var(--accent)' }}>блогеры</span> находят друг друга
