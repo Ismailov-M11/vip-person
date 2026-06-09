@@ -97,7 +97,7 @@ function BAdDetail({ nav, params }) {
       <ScreenScroll>
         <div style={{ position: 'relative' }}>
           <Placeholder label={ad.photo} height={230} radius={0} />
-          <div style={{ position: 'absolute', top: 56, left: 18, right: 18, display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ position: 'absolute', top: 68, left: 18, right: 18, display: 'flex', justifyContent: 'space-between' }}>
             <IconBtn name="back" onClick={() => nav.pop()} style={{ background: 'rgba(12,11,10,0.6)', backdropFilter: 'blur(8px)' }} />
             <IconBtn name="share" onClick={() => nav.toast('Ссылка скопирована')} style={{ background: 'rgba(12,11,10,0.6)', backdropFilter: 'blur(8px)' }} />
           </div>
@@ -318,13 +318,13 @@ function BProfile({ nav }) {
   const b = window.DATA.bloggers.madina;
   return (
     <ScreenScroll>
-      <div style={{ position: 'relative', height: 120, background: 'linear-gradient(120deg, #2A1E16, #1A1714)' }}>
-        <div style={{ position: 'absolute', top: 56, right: 18, display: 'flex', gap: 8 }}>
+      <div style={{ position: 'relative', height: 152, background: 'linear-gradient(120deg, #2A1E16, #1A1714)' }}>
+        <div style={{ position: 'absolute', top: 68, right: 18, display: 'flex', gap: 8 }}>
           <IconBtn name="edit" onClick={() => nav.toast('Редактирование профиля')} style={{ background: 'rgba(12,11,10,0.5)' }} />
           <IconBtn name="sliders" onClick={() => nav.toast('Настройки фильтров')} style={{ background: 'rgba(12,11,10,0.5)' }} />
         </div>
       </div>
-      <div style={{ padding: '0 18px', marginTop: -42 }}>
+      <div style={{ padding: '0 18px', marginTop: -48 }}>
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: 14, marginBottom: 16 }}>
           <Avatar initials={b.initials} color={b.color} size={84} ring />
           <div style={{ paddingBottom: 6 }}>
@@ -408,10 +408,10 @@ function BBizProfile({ nav, params }) {
   const [sub, setSub] = React.useState(false);
   return (
     <ScreenScroll>
-      <div style={{ position: 'relative', height: 120, background: `linear-gradient(120deg, ${biz.color}55, var(--bg))` }}>
-        <div style={{ position: 'absolute', top: 56, left: 18 }}><IconBtn name="back" onClick={() => nav.pop()} style={{ background: 'rgba(12,11,10,0.5)' }} /></div>
+      <div style={{ position: 'relative', height: 152, background: `linear-gradient(120deg, ${biz.color}55, var(--bg))` }}>
+        <div style={{ position: 'absolute', top: 68, left: 18 }}><IconBtn name="back" onClick={() => nav.pop()} style={{ background: 'rgba(12,11,10,0.5)' }} /></div>
       </div>
-      <div style={{ padding: '0 18px', marginTop: -38 }}>
+      <div style={{ padding: '0 18px', marginTop: -48 }}>
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: 14, marginBottom: 14 }}>
           <BizLogo biz={biz} size={80} />
           <div style={{ paddingBottom: 6, flex: 1 }}>
